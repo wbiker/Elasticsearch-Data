@@ -1,0 +1,19 @@
+{
+  "authors" : [
+    "Wolfgang Banaston"
+  ],
+  "build-depends" : [ ],
+  "depends" : [ ],
+  "description" : "blah blah blah",
+  "license" : "Artistic-2.0",
+  "name" : "Elasticsearch::Data",
+  "perl" : "6.c",
+  "provides" : {
+    "Elasticsearch::Data" : "lib/Elasticsearch/Data.pm6"
+  },
+  "resources" : [ ],
+  "source-url" : "",
+  "tags" : [ ],
+  "test-depends" : [ ],
+  "version" : "0.0.1"
+}
