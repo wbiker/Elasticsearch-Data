@@ -40,16 +40,15 @@ method post(:%data) {
 
     my $url = $!url ~ "/" ~ $!index ~ "/" ~ $!type;
 
-    say "Url to post data: $url";
     my %headers = ( 'Content-Type' => 'application/json' );
     my $response = LWP::Simple.post($url, %headers, $json);
     if $response {
       $response = from-json $response;
       if $response<_shards><successful> == 1 {
-        say "Successfully created.";
+        return $response;
       }
       else {
-        say "Failed.";
+        die $response;
       }
     }
 }

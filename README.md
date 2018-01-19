@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wbiker/Elasticsearch-Data.svg?branch=master)](https://travis-ci.org/wbiker/Elasticsearch-Data)
+
 NAME
 ====
 

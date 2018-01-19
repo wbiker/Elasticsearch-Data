@@ -12,7 +12,7 @@
     "Elasticsearch::Data" : "lib/Elasticsearch/Data.pm6"
   },
   "resources" : [ ],
-  "source-url" : "",
+  "source-url" : "https://github.com/wbiker/Elasticsearch-Data.git",
   "tags" : [ ],
   "test-depends" : [ ],
   "version" : "0.0.1"
