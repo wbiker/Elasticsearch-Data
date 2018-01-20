@@ -3,8 +3,8 @@
     "wbiker"
   ],
   "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "blah blah blah",
+  "depends" : [LWP::Simple, JSON::Fast],
+  "description" : "Sends hash to a elasticsearch url",
   "license" : "Artistic-2.0",
   "name" : "Elasticsearch::Data",
   "perl" : "6.c",
@@ -15,5 +15,5 @@
   "source-url" : "https://github.com/wbiker/Elasticsearch-Data.git",
   "tags" : [ ],
   "test-depends" : [ ],
-  "version" : "0.0.1"
+  "version" : "0.0.2"
 }

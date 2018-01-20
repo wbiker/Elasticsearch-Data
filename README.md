@@ -3,17 +3,19 @@
 NAME
 ====
 
-Elasticsearch::Data - blah blah blah
+Elasticsearch::Data - Sends hash to a elasticsearch url
 
 SYNOPSIS
 ========
 
     use Elasticsearch::Data;
+    my $elasticsearch = Elasticsearch::Data.new(url => "http://elasticsearch:9200", index => "tests");
+    $elasticsearch.post({ date => "2018-01-20T19:46:59Z", name => "test", status => "failed"});
 
 DESCRIPTION
 ===========
 
-Elasticsearch::Data is ...
+Elasticsearch::Data is a wrapper to send data to a elasticsearch instance.
 
 AUTHOR
 ======
