@@ -2,7 +2,7 @@ use v6.c;
 use Test;
 use Elasticsearch::Data;
 
-plan 3;
+plan 6;
 
 class UserAgentMock {
     has $.successful = True;
@@ -15,6 +15,12 @@ class UserAgentMock {
         return '{ something_happened => 1 }';
     }
 }
+
+lives-ok { Elasticsearch::Data.new(url => "http://localhost:9200", index => "tmp", user-agent => UserAgentMock.new()) }, "Url with http is fine";
+
+lives-ok { Elasticsearch::Data.new(url => "https://localhost:9200", index => "tmp", user-agent => UserAgentMock.new()) }, "Url with https is fine";
+
+dies-ok { Elasticsearch::Data.new(url => "wrong://localhost:9200", index => "tmp", user-agent => UserAgentMock.new()) }, "Dies when url is not http or https";
 
 my $elasticsearch = Elasticsearch::Data.new(url => "http://localhost:9200", index => "tmp", user-agent => UserAgentMock.new);
 my $response = $elasticsearch.post(data => {wolf => "ich", date => DateTime.now.Str});

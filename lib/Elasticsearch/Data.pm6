@@ -28,10 +28,13 @@ Copyright 2018 wbiker
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 =end pod
+
 use JSON::Fast;
 use LWP::Simple;
 
-has $.url is required;
+subset Url of Str where * ~~ /^ "http" | "https"/;
+
+has Url $.url is required;
 has $.index is required;
 has $.user-agent = LWP::Simple.new;
 has $.type = "items";
