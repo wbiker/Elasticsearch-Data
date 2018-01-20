@@ -3,7 +3,7 @@
     "wbiker"
   ],
   "build-depends" : [ ],
-  "depends" : [LWP::Simple, JSON::Fast],
+  "depends" : ["LWP::Simple", "JSON::Fast"],
   "description" : "Sends hash to a elasticsearch url",
   "license" : "Artistic-2.0",
   "name" : "Elasticsearch::Data",
